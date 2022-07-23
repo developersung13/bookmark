@@ -52,6 +52,7 @@ function Auth() {
           placeholder="password"
           value={password}
           required
+          minLength={6}
           onChange={onChange}
         />
         <input
