@@ -20,7 +20,6 @@ function Auth() {
         // log in
         data = await authService.signInWithEmailAndPassword(email, password);
       }
-      console.log(data);
     } catch (error) {
       setError(error.message.slice(9, error.message.indexOf(".") + 1));
     }
@@ -49,7 +48,7 @@ function Auth() {
         />
         <input
           name="password"
-          type="text"
+          type="password"
           placeholder="password"
           value={password}
           required
