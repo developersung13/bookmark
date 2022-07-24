@@ -1,5 +1,7 @@
 import { authService, firebaseInstance } from "fbase";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Auth() {
   const [email, setEmail] = useState("");
@@ -49,6 +51,7 @@ function Auth() {
   };
   return (
     <div>
+      <i class="fa-solid fa-book-bookmark"></i>
       <form onSubmit={onSubmit}>
         <input
           name="email"
@@ -78,10 +81,10 @@ function Auth() {
       </span>
       <div>
         <button name="google" onClick={onSocialClick}>
-          Continue with Google
+          Continue with Google <FontAwesomeIcon icon={faGoogle} />
         </button>
         <button name="github" onClick={onSocialClick}>
-          Continue with Github
+          Continue with Github <FontAwesomeIcon icon={faGithub} />
         </button>
       </div>
     </div>
