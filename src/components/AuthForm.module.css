@@ -1,0 +1,20 @@
+.authInput form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 15px;
+  background-color: rgb(247, 248, 250);
+  border: 1px solid rgb(217, 222, 228);
+  border-radius: 5px;
+}
+
+.passwordInput {
+  margin-top: 30px;
+}
+
+.authSubmit {
+  margin-top: 13px;
+  border: 1px solid rgb(217, 222, 228);
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(84, 162, 88);
+}

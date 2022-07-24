@@ -1,42 +1,10 @@
 import { authService, firebaseInstance } from "fbase";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
+import styles from "routes/Auth.module.css";
+import AuthForm from "components/AuthForm";
 
 function Auth() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [newAccount, setNewAccount] = useState(false);
-  const [error, setError] = useState("");
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      let data;
-      if (newAccount) {
-        // create account
-        data = await authService.createUserWithEmailAndPassword(
-          email,
-          password
-        );
-      } else {
-        // log in
-        data = await authService.signInWithEmailAndPassword(email, password);
-      }
-    } catch (error) {
-      setError(error.message.slice(9, error.message.indexOf(".") + 1));
-    }
-  };
-  const onChange = (event) => {
-    const {
-      target: { name, value },
-    } = event;
-    if (name === "email") {
-      setEmail(value);
-    } else if (name === "password") {
-      setPassword(value);
-    }
-  };
-  const toggleAccount = () => setNewAccount((prev) => !prev);
   const onSocialClick = async (event) => {
     const {
       target: { name },
@@ -50,35 +18,9 @@ function Auth() {
     await authService.signInWithPopup(provider);
   };
   return (
-    <div>
-      <i class="fa-solid fa-book-bookmark"></i>
-      <form onSubmit={onSubmit}>
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={email}
-          required
-          onChange={onChange}
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="password"
-          value={password}
-          required
-          minLength={6}
-          onChange={onChange}
-        />
-        <input
-          type="submit"
-          value={newAccount ? "Create Account" : "Sign in"}
-        />
-        {error && <span>{error}</span>}
-      </form>
-      <span onClick={toggleAccount}>
-        {newAccount ? "Sign in" : "Create Account"}
-      </span>
+    <div className={styles.authContainer}>
+      <i className="fa-solid fa-book-bookmark"></i>
+      <AuthForm />
       <div>
         <button name="google" onClick={onSocialClick}>
           Continue with Google <FontAwesomeIcon icon={faGoogle} />
