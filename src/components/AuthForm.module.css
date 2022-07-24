@@ -1,20 +1,54 @@
 .authInput form {
+  width: 300px;
+  height: 210px;
   display: flex;
   flex-direction: column;
-  padding: 40px 15px;
-  background-color: rgb(247, 248, 250);
-  border: 1px solid rgb(217, 222, 228);
+  padding: 20px 15px 0;
+  background-color: rgb(245, 246, 249);
+  border: 1px solid rgb(207, 214, 222);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.authInput__email__label {
+  margin-bottom: 5px;
+}
+
+.authInput__email {
+  height: 30px;
+  border: 1px solid rgb(207, 214, 222);
   border-radius: 5px;
 }
 
-.passwordInput {
-  margin-top: 30px;
+.authInput__password__label {
+  margin: 20px 0 5px;
+}
+
+.authInput__password {
+  height: 30px;
+  border: 1px solid rgb(207, 214, 222);
+  border-radius: 5px;
 }
 
 .authSubmit {
-  margin-top: 13px;
-  border: 1px solid rgb(217, 222, 228);
+  height: 30px;
+  margin-top: 17px;
+  border: 1px solid rgb(39, 128, 56);
   border-radius: 5px;
   color: white;
-  background-color: rgb(84, 162, 88);
+  background-color: rgb(41, 151, 62);
+  cursor: pointer;
+}
+
+.auth__toggle {
+  padding: 15px 15px;
+  border: 1px solid rgb(207, 214, 222);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth__toggle__text {
+  color: blue;
+  cursor: pointer;
 }

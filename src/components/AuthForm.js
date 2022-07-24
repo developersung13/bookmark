@@ -38,35 +38,42 @@ function AuthForm() {
   const toggleAccount = () => setNewAccount((prev) => !prev);
   return (
     <div className={styles.authInput}>
+      {error && <span>{error}</span>}
       <form onSubmit={onSubmit}>
+        <label htmlFor="email" className={styles.authInput__email__label}>
+          Email address
+        </label>
         <input
           name="email"
           type="email"
-          placeholder="Email"
           value={email}
           required
           onChange={onChange}
-          className={styles.emailInput}
+          className={styles.authInput__email}
         />
+        <label htmlFor="password" className={styles.authInput__password__label}>
+          Password
+        </label>
         <input
           name="password"
           type="password"
-          placeholder="password"
           value={password}
           required
           minLength={6}
           onChange={onChange}
-          className={styles.passwordInput}
+          className={styles.authInput__password}
         />
         <input
           type="submit"
           value={newAccount ? "Create Account" : "Sign in"}
           className={styles.authSubmit}
         />
-        {error && <span>{error}</span>}
       </form>
-      <span onClick={toggleAccount}>
-        {newAccount ? "Sign in" : "Create Account"}
+      <span onClick={toggleAccount} className={styles.auth__toggle}>
+        {newAccount || "New to bookmark?"}&nbsp;
+        <span className={styles.auth__toggle__text}>
+          {newAccount ? "Sign in" : "Create Account ."}
+        </span>
       </span>
     </div>
   );

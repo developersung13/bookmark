@@ -10,6 +10,7 @@ function Auth() {
       target: { name },
     } = event;
     let provider;
+    console.log(event.target);
     if (name === "google") {
       provider = new firebaseInstance.auth.GoogleAuthProvider();
     } else if (name === "github") {
@@ -20,14 +21,11 @@ function Auth() {
   return (
     <div className={styles.authContainer}>
       <i className="fa-solid fa-book-bookmark"></i>
+      <h1 className={styles.iconText}>Sign in to bookmark</h1>
       <AuthForm />
-      <div>
-        <button name="google" onClick={onSocialClick}>
-          Continue with Google <FontAwesomeIcon icon={faGoogle} />
-        </button>
-        <button name="github" onClick={onSocialClick}>
-          Continue with Github <FontAwesomeIcon icon={faGithub} />
-        </button>
+      <div className={styles.socialContainer}>
+        <FontAwesomeIcon onClick={onSocialClick} icon={faGoogle} />
+        <FontAwesomeIcon onClick={onSocialClick} icon={faGithub} />
       </div>
     </div>
   );
