@@ -15,6 +15,7 @@
 }
 
 .authInput__email {
+  padding-left: 11px;
   height: 30px;
   border: 1px solid rgb(207, 214, 222);
   border-radius: 5px;
@@ -25,6 +26,7 @@
 }
 
 .authInput__password {
+  padding-left: 11px;
   height: 30px;
   border: 1px solid rgb(207, 214, 222);
   border-radius: 5px;
