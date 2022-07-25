@@ -38,6 +38,11 @@
   color: white;
   background-color: rgb(41, 151, 62);
   cursor: pointer;
+  transition: 0.075s ease-in-out;
+}
+
+.authSubmit:hover {
+  background-color: rgb(38, 137, 59);
 }
 
 .auth__toggle {
@@ -51,4 +56,8 @@
 .auth__toggle__text {
   color: blue;
   cursor: pointer;
+}
+
+.auth__toggle__text:hover {
+  text-decoration: underline;
 }

@@ -49,6 +49,7 @@ function AuthForm() {
           value={email}
           required
           onChange={onChange}
+          autoFocus="true"
           className={styles.authInput__email}
         />
         <label htmlFor="password" className={styles.authInput__password__label}>
