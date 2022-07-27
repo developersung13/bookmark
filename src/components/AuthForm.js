@@ -25,6 +25,7 @@ function AuthForm() {
       setError(error.message.slice(9, error.message.indexOf(".") + 1));
     }
   };
+  const closeErrorMsg = () => setError(false);
   const onChange = (event) => {
     const {
       target: { name, value },
@@ -38,7 +39,17 @@ function AuthForm() {
   const toggleAccount = () => setNewAccount((prev) => !prev);
   return (
     <div className={styles.authInput}>
-      {error && <span>{error}</span>}
+      {error && (
+        <>
+          <span className={styles.errorMsg}>
+            {error}
+            <button onClick={closeErrorMsg}>
+              <i className="fa-solid fa-xmark"></i>
+            </button>
+          </span>
+          <div className={styles.whiteSpace}></div>
+        </>
+      )}
       <form onSubmit={onSubmit}>
         <label htmlFor="email" className={styles.authInput__email__label}>
           Email address
@@ -49,7 +60,7 @@ function AuthForm() {
           value={email}
           required
           onChange={onChange}
-          autoFocus="true"
+          autoFocus={true}
           className={styles.authInput__email}
         />
         <label htmlFor="password" className={styles.authInput__password__label}>
@@ -70,9 +81,9 @@ function AuthForm() {
           className={styles.authSubmit}
         />
       </form>
-      <span onClick={toggleAccount} className={styles.auth__toggle}>
+      <span className={styles.auth__toggle}>
         {newAccount || "New to bookmark?"}&nbsp;
-        <span className={styles.auth__toggle__text}>
+        <span onClick={toggleAccount} className={styles.auth__toggle__text}>
           {newAccount ? "Sign in" : "Create Account ."}
         </span>
       </span>
