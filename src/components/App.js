@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AppRouter from "components/Router";
 import { authService } from "fbase";
-import styles from "App.module.css";
+import styles from "components/App.module.css";
 
 function App() {
   const [init, setInit] = useState(false);
