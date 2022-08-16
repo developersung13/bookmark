@@ -48,7 +48,7 @@
   "homepage": "https://developersung13.github.io/bookmark",
   "devDependencies": {
     "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.7"
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }

@@ -47,7 +47,7 @@ function AuthForm() {
         </>
       )}
       <form onSubmit={onSubmit}>
-        <label htmlFor="email" className="authInput__email__label">
+        <label htmlFor="email" className="authInput_email_label">
           Email address
         </label>
         <input
@@ -57,9 +57,9 @@ function AuthForm() {
           required
           onChange={onChange}
           autoFocus={true}
-          className="authInput__email"
+          className="authInput_email"
         />
-        <label htmlFor="password" className="authInput__password__label">
+        <label htmlFor="password" className="authInput_password_label">
           Password
         </label>
         <input
@@ -69,17 +69,17 @@ function AuthForm() {
           required
           minLength={6}
           onChange={onChange}
-          className="authInput__password"
+          className="authInput_password"
         />
         <input
           type="submit"
           value={newAccount ? "Create Account" : "Sign in"}
-          className="authSubmit"
+          className="authSubmit font-bold"
         />
       </form>
-      <span className="auth__toggle">
+      <span className="auth_toggle">
         {newAccount || "New to bookmark?"}&nbsp;
-        <span onClick={toggleAccount} className="auth__toggle__text">
+        <span onClick={toggleAccount} className="auth_toggle_text">
           {newAccount ? "Sign in" : "Create Account ."}
         </span>
       </span>

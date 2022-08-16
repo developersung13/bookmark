@@ -4,59 +4,59 @@
   height: 100vh;
   justify-content: flex-start;
   align-items: center;
-}
+  > i {
+    margin-top: 5vh;
+    font-size: 50px;
+  }
 
-.authContainer > i {
-  margin-top: 5vh;
-  font-size: 50px;
-}
+  .iconText {
+    margin: 30px auto 10px;
+    font-size: 23px;
+    letter-spacing: -1px;
+  }
 
-.iconText {
-  margin-top: 30px;
-  font-size: 23px;
-}
+  .authBtns {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    width: 160px;
+    justify-content: space-around;
 
-.authBtns {
-  margin-top: 20px;
-  position: relative;
-  display: flex;
-  width: 160px;
-  justify-content: space-around;
-}
+    * {
+      padding: 9px 10px;
+      font-size: 30px;
+      border-radius: 50%;
+    }
 
-.authBtns * {
-  padding: 9px 10px;
-  font-size: 30px;
-  border-radius: 50%;
-}
+    :nth-child(1) {
+      padding: 23px;
+      background-color: transparent;
+      cursor: pointer;
+      z-index: 10;
+      border: 2px solid rgb(207, 214, 222);
+    }
 
-.authBtns > :nth-child(1) {
-  padding: 23px;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 10;
-  border: 2px solid rgb(207, 214, 222);
-}
+    :nth-child(2) {
+      position: absolute;
+      left: 16px;
+      top: 2px;
+      color: #4285f4;
+    }
 
-.authBtns > :nth-child(2) {
-  position: absolute;
-  left: 16px;
-  top: 2px;
-  color: #4285f4;
-}
+    :nth-child(3) {
+      padding: 23px;
+      /* border: transparent; */
+      background-color: transparent;
+      cursor: pointer;
+      z-index: 10;
+      border: 2px solid rgb(207, 214, 222);
+    }
 
-.authBtns > :nth-child(3) {
-  padding: 23px;
-  /* border: transparent; */
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 10;
-  border: 2px solid rgb(207, 214, 222);
-}
-
-.authBtns > :nth-child(4) {
-  position: absolute;
-  left: 92.5px;
-  top: -2px;
-  font-size: 37px;
+    :nth-child(4) {
+      position: absolute;
+      left: 92.5px;
+      top: -2px;
+      font-size: 37px;
+    }
+  }
 }
