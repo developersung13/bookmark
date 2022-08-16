@@ -10,7 +10,7 @@ function Home() {
               href="https://eis.cbnu.ac.kr/cbnuLogin"
               className="border p-2"
             >
-              충북대학교
+              개신누리
             </a>
           </li>
           <li className="m-7">
