@@ -7,6 +7,16 @@ function Home() {
             <a
               target="_blank"
               rel="noopener noreferrer"
+              href="https://eis.cbnu.ac.kr/cbnuLogin"
+              className="border p-2"
+            >
+              충북대학교
+            </a>
+          </li>
+          <li className="m-7">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://www.chungbuk.ac.kr/site/www/boardList.do?boardSeq=112&key=698"
               className="border p-2"
             >
