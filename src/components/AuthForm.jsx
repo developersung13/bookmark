@@ -1,6 +1,6 @@
 import { authService } from "fbase";
 import { useState } from "react";
-import styles from "components/AuthForm.module.css";
+import "components/AuthForm.scss";
 
 function AuthForm() {
   const [email, setEmail] = useState("");
@@ -34,20 +34,20 @@ function AuthForm() {
   };
   const toggleAccount = () => setNewAccount((prev) => !prev);
   return (
-    <div className={styles.authInput}>
+    <div className="authInput">
       {error && (
         <>
-          <span className={styles.errorMsg}>
+          <span className="errorMsg">
             {error}
             <button onClick={closeErrorMsg}>
               <i className="fa-solid fa-xmark"></i>
             </button>
           </span>
-          <div className={styles.whiteSpace}></div>
+          <div className="whiteSpace"></div>
         </>
       )}
       <form onSubmit={onSubmit}>
-        <label htmlFor="email" className={styles.authInput__email__label}>
+        <label htmlFor="email" className="authInput__email__label">
           Email address
         </label>
         <input
@@ -57,9 +57,9 @@ function AuthForm() {
           required
           onChange={onChange}
           autoFocus={true}
-          className={styles.authInput__email}
+          className="authInput__email"
         />
-        <label htmlFor="password" className={styles.authInput__password__label}>
+        <label htmlFor="password" className="authInput__password__label">
           Password
         </label>
         <input
@@ -69,17 +69,17 @@ function AuthForm() {
           required
           minLength={6}
           onChange={onChange}
-          className={styles.authInput__password}
+          className="authInput__password"
         />
         <input
           type="submit"
           value={newAccount ? "Create Account" : "Sign in"}
-          className={styles.authSubmit}
+          className="authSubmit"
         />
       </form>
-      <span className={styles.auth__toggle}>
+      <span className="auth__toggle">
         {newAccount || "New to bookmark?"}&nbsp;
-        <span onClick={toggleAccount} className={styles.auth__toggle__text}>
+        <span onClick={toggleAccount} className="auth__toggle__text">
           {newAccount ? "Sign in" : "Create Account ."}
         </span>
       </span>

@@ -1,7 +1,7 @@
 import { authService, firebaseInstance } from "fbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
-import styles from "routes/Auth.module.css";
+import "routes/Auth.scss";
 import AuthForm from "components/AuthForm";
 
 function Auth() {
@@ -18,11 +18,11 @@ function Auth() {
     await authService.signInWithPopup(provider);
   };
   return (
-    <div className={styles.authContainer}>
+    <div className="authContainer">
       <i className="fa-solid fa-book-bookmark"></i>
-      <h1 className={styles.iconText}>Sign in to bookmark</h1>
+      <h1 className="iconText">Sign in to bookmark</h1>
       <AuthForm />
-      <div className={styles.authBtns}>
+      <div className="authBtns">
         <button onClick={onSocialClick} name="google"></button>
         <FontAwesomeIcon icon={faGoogle} />
         <button onClick={onSocialClick} name="github"></button>
