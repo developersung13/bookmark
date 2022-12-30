@@ -117,6 +117,16 @@ function Home() {
               통합검색
             </a>
           </li>
+          <li className="m-7">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.chungbuk.ac.kr/resource/site/www/campus_map.jsp"
+              className="border p-2"
+            >
+              캠퍼스맵
+            </a>
+          </li>
         </ul>
       </div>
     </div>
