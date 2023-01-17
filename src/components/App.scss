@@ -1,7 +1,9 @@
 .init {
+  height: 100vh;
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
   align-items: center;
+  width: 25rem;
   font-size: 20px;
   letter-spacing: 3px;
 }
