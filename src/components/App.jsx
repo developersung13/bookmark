@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AppRouter from "components/Router";
 import { authService } from "fbase";
-import "components/App.scss";
+import "./App.scss";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -21,7 +21,12 @@ function App() {
       {init ? (
         <AppRouter isLoggedIn={isLoggedIn} />
       ) : (
-        <div className="init">Initializing...</div>
+        <div className="init">
+          <img
+            src="https://i.pinimg.com/originals/e1/80/4e/e1804e9f5a5c4893167f45873342faba.gif"
+            alt=""
+          />
+        </div>
       )}
     </>
   );
